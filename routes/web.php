@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HelloController;
 
-Route::get('/', function () {
-    return 'Hello, world!';
-});
+Route::get('/api', [HelloController::class, 'index']);
