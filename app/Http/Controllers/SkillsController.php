@@ -19,7 +19,6 @@ class SkillsController extends Controller {
     public function create() {
         $skill = Skill::create(request()->all());
         $skill-> save();
-
         return response()->json($skill);
     }
 

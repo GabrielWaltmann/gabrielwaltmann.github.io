@@ -4,9 +4,13 @@
     "scripts": {
         "dev": "php artisan serve",
         "build": "vite build",
+
         "migrate:apply": "php artisan migrate",
         "migrate:rollback": "php artisan migrate:rollback",
-        "migrate:create": "php artisan migrate:create"
+        "migrate:create": "php artisan make:migration",
+
+        "controller:create": "php artisan make:controller",
+        "model:create": "php artisan make:model"
     },
     "devDependencies": {
         "axios": "^1.7.4",
