@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\JobsController;
+use App\Http\Controllers\ConfigsController;
 
 // * core
 Route::get('/api', [HelloController::class, 'index']);
@@ -24,3 +25,10 @@ Route::get('/api/jobs', [JobsController::class, 'retrieves']);
 Route::get('/api/jobs/{id}', [JobsController::class, 'retrievesOne']);
 Route::put('/api/jobs/{id}', [JobsController::class, 'update']);
 Route::delete('/api/jobs/{id}', [JobsController::class, 'delete']);
+
+// * config
+Route::post('/api/configs', [ConfigsController::class, 'create']);
+Route::get('/api/configs', [ConfigsController::class, 'retrieves']);
+Route::get('/api/configs/{key}', [ConfigsController::class, 'retrievesOne']);
+Route::put('/api/configs/{key}', [ConfigsController::class, 'update']);
+Route::delete('/api/configs/{key}', [ConfigsController::class, 'delete']);
