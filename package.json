@@ -2,7 +2,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "php artisan serve",
+        "dev": "npm run build && php artisan serve",
         "build": "vite build",
         "migrate:apply": "php artisan migrate",
         "migrate:rollback": "php artisan migrate:rollback",
