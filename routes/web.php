@@ -6,6 +6,11 @@ use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\JobsController;
 use App\Http\Controllers\ConfigsController;
 
+// * pages
+Route::get('/', function () {
+    return view('home');
+});
+
 // * core
 Route::get('/api', [HelloController::class, 'index']);
 Route::get('/api/csrf-token', function () {
