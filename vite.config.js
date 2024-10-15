@@ -8,4 +8,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    proxy: {
+        '/api': {
+            target: process.env.VITE_PROXY_TARGET,
+            changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      },
 });
